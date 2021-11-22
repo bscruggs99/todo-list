@@ -1,0 +1,63 @@
+div {
+	width: 100%;
+	border: 1px solid black;
+}
+
+section {
+
+	width: 60%;
+	height: 450px;
+	padding-top: 12px;
+	margin:  0 auto;
+	border: 1px solid blue;
+	position: relative;
+	background-color: rgba(0, 109, 119,.6);
+}
+
+input {
+
+	width: 250px;
+}
+table {
+	box-shadow: 5px 2px 4px black;
+}
+
+table, td, thead {
+
+	border:  1px solid black;
+	margin:  0 auto;
+	width: 80%;
+	text-align: center;
+	background-color: rgba(237, 246, 249);
+
+}
+
+#heading {
+
+	font-size: 28px;
+	font-family: courier;
+	font-face: bold;
+	box-shadow: 1px 1px 4px rgb(0,109,119);
+}
+
+td {
+
+	width:  90px;
+}
+
+.remove, .check {
+
+	width: 15%;
+}
+
+.crossout {
+
+	text-decoration:  line-through;
+}
+
+.check input {
+
+	padding: 0;
+	width: 15%;
+
+}
