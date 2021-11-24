@@ -1,21 +1,23 @@
 let input= document.querySelector("#input");
 let add = document.querySelector(".add");
-let deleteItem = document.querySelectorAll(".delItem");
 
 add.addEventListener("click", addItem);
 
+/*function for adding items to the list*/
 function addItem() {
 let table = document.querySelector("table");
 let tr = document.createElement("tr");
-var removeButton = document.createElement("button");
+let removeButton = document.createElement("button");
+
 removeButton.classList.add("delItem");
 removeButton.textContent = "Remove";
 removeButton.addEventListener("click", removeItem);
-	var td1 = tr.appendChild(document.createElement("td"));
+
+	let td1 = tr.appendChild(document.createElement("td"));
 	let td2 = tr.appendChild(document.createElement("td"));
 	let td3 = tr.appendChild(document.createElement("td"));
 	
-var check = document.createElement("input");
+let check = document.createElement("input");
 check.type="checkbox";
 
 td1.appendChild(check);
@@ -29,30 +31,29 @@ td3.appendChild(removeButton);
 	tr.appendChild(td3);
 table.appendChild(tr);
 
-td1.addEventListener("click", crossOut);
+check.addEventListener("click", function() {
+event.target.parentNode.nextElementSibling.classList.toggle("crossout");
+});
+
 input.value="";
 }
 
-
+/*function to remove single item*/
 function removeItem() {
 
 event.target.parentNode.parentNode.remove();
 
 }
 
-function crossOut() {
+let reset = document.querySelector("#reset");
+reset.addEventListener("click", resetList);
 
-event.target.parentNode.nextElementSibling.classList.toggle("crossout");
-//event.target.parentNode.nextElementSibling.style.textDecoration = "line-through";
+/*function to reset whole list*/
+function resetList() {
 
-	
+	let listTr = document.getElementsByClassName("listTr");
+	while(listTr[0]) {
+listTr[0].parentNode.removeChild(listTr[0]);
+	}
+
 }
-
-/*function check() {
-	//let checked = 
-
-
-}
-
-check()
-*/

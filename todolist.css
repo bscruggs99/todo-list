@@ -1,6 +1,6 @@
 div {
 	width: 100%;
-	border: 1px solid black;
+	
 }
 
 section {
@@ -9,7 +9,6 @@ section {
 	height: 450px;
 	padding-top: 12px;
 	margin:  0 auto;
-	border: 1px solid blue;
 	position: relative;
 	background-color: rgba(0, 109, 119,.6);
 }
